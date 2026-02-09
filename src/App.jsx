@@ -1,15 +1,19 @@
 import { useState } from 'react'
+import Header from "./components/Header"
+import Counter from "./components/Counter"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div style={{ padding: 20 }}>
+      <Header title="Dashboard Header" />
+      <div style={{ padding: 20 }}  >
         <h1>React Dashboard</h1>
-        <p>Count: {count}</p>
-        <button onClick={() => setCount(count + 1)} style={{ marginLeft: 10 }}>Increament</button>
+        <Counter count={count} />
+        <button onClick={() => setCount(count + 1)}>Increament</button>
       </div>
+
     </>
   )
 }
