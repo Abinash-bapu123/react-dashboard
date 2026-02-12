@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import Header from "./components/Header"
 import Counter from "./components/Counter"
+import TaskManager from "./components/TaskManager"
 
 function App() {
   const [count, setCount] = useState(0);
-
   return (
     <>
       <Header title="Dashboard Header" />
@@ -12,6 +12,7 @@ function App() {
         <h1>React Dashboard</h1>
         <Counter count={count} />
         <button onClick={() => setCount(count + 1)}>Increament</button>
+        <TaskManager />
       </div>
 
     </>
